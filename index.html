@@ -18,7 +18,41 @@
     <div class="container">
 
         <!-- Creating the left side of flex box -->
-        <div class="flex-left"></div>
+        <div class="flex-left">
+
+
+            <!-- multiplied coords by 50 so canvas should be 450 x 450, but cuts off point so elongated the canvas dimensions/axis lines -->
+            <!-- Creating the canvas to house the scatter plot -->
+            <svg id="frame" height="600" width="600">  
+
+            <!-- Creating the axes -->
+            <line x1="0" y1="500" x2="500" y2="500" style="stroke:rgb(255,0,0);stroke-width:2">
+            <line x1="0" y1="500" x2="0" y2="0" style="stroke:rgb(255,0,0);stroke-width:2">
+
+            <!-- Creating the point at (1, 2) -->
+            <text x="50" y="350">(1,2)</text>  
+            <circle cx="50" cy="350" r="10"/>
+            
+
+            <!-- Creating the point at (2, 4) -->
+            <text x="100" y="500">(2, 4)</text>
+            <circle cx="100" cy="500" r="10"/>
+
+
+            <!-- Creating the point at (6, 2) -->
+            <text x="300" y="700">(6, 2)</text>
+            <circle cx="300" cy="700" r="10"/>
+
+
+            <!-- Creating the point at (9, 9) -->
+            <text x="450" y="0">(9, 9)</text>
+            <circle cx="450" cy="0" r="10"/>
+
+
+
+
+        </svg>
+        </div>
         
 
 
@@ -38,6 +72,8 @@
     <div id="d3">
         <ul>
             <li><a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/">A Guide to Flexbox</a></li>
+            <li><a href="https://www.w3schools.com/graphics/svg_line.asp">SVG Line</a></li>
+        
             
         </ul>
     </div>
