@@ -1,0 +1,19 @@
+/* sets font size */
+body {
+	font-family: Arial;	
+}
+
+.container {
+	display: flex;
+	flex-direction: row;
+}
+
+
+.flex-left {
+	width: 60%;
+}
+
+
+.flex-rightt {
+	width: 40%;
+}
