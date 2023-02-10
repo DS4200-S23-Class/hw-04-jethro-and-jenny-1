@@ -23,32 +23,43 @@
 
             <!-- multiplied coords by 50 so canvas should be 450 x 450, but cuts off point so elongated the canvas dimensions/axis lines -->
             <!-- Creating the canvas to house the scatter plot -->
-            <svg id="frame" height="600" width="600">  
+            <svg id="frame" height="500" width="500">  
 
             <!-- Creating the axes -->
-            <line x1="0" y1="500" x2="500" y2="500" style="stroke:rgb(255,0,0);stroke-width:2">
-            <line x1="0" y1="500" x2="0" y2="0" style="stroke:rgb(255,0,0);stroke-width:2">
+            <svg>
+                <line class="axis" x1="0" y1="500" x2="500" y2="500">
+            </svg>
+
+            <svg>
+                <line class="axis" x1="0" y1="500" x2="0" y2="0">
+            </svg>
 
             <!-- Creating the point at (1, 2) -->
-            <text x="50" y="350">(1,2)</text>  
-            <circle cx="50" cy="350" r="10"/>
+            <svg>
+                <text x="50" y="375">(1,2)</text>  
+                <circle id="(1,2)" class="point" cx="50" cy="400" r="10" onclick="toggleBorder('(1,2)')"/>
+            </svg>
             
 
             <!-- Creating the point at (2, 4) -->
-            <text x="100" y="500">(2, 4)</text>
-            <circle cx="100" cy="500" r="10"/>
+            <svg>
+                <text x="100" y="275">(2, 4)</text>
+                <circle id="(2, 4)" class="point" cx="100" cy="300" r="10" onclick="toggleBorder('(2, 4)')"/>
+            </svg>
 
 
             <!-- Creating the point at (6, 2) -->
-            <text x="300" y="700">(6, 2)</text>
-            <circle cx="300" cy="700" r="10"/>
+            <svg>
+                <text x="300" y="375">(6, 2)</text>
+                <circle id="(6, 2)" class="point" cx="300" cy="400" r="10" onclick="toggleBorder('(6, 2)')"/>
+            </svg>
 
 
             <!-- Creating the point at (9, 9) -->
-            <text x="450" y="0">(9, 9)</text>
-            <circle cx="450" cy="0" r="10"/>
-
-
+            <svg>
+                <text x="450" y="25">(9, 9)</text>
+                <circle id="(9, 9)" class="point" cx="450" cy="50" r="10" onclick="toggleBorder('(9, 9)')"/>
+            </svg>
 
 
         </svg>
@@ -57,10 +68,17 @@
 
 
         <!-- Creating the right side of the flex box -->
-        <div class="flex-right"></div>
+        <div class="flex-right">
+            
+            <div id="pointDiv">
+            </div>
+
+        </div>
         
     </div>
 
+<!-- link js file -->   
+<script src='main.js'></script>
 
 </body>
 
@@ -73,6 +91,13 @@
         <ul>
             <li><a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/">A Guide to Flexbox</a></li>
             <li><a href="https://www.w3schools.com/graphics/svg_line.asp">SVG Line</a></li>
+            <li><a href="https://www.w3schools.com/graphics/svg_circle.asp">SVG Circle</a></li>
+            <li><a href="https://www.sarasoueidan.com/blog/svg-coordinate-systems/">Understand SVG Coordinate Systems</a></li>
+            <li><a href="https://learntheweb.courses/topics/advanced-svg/#adding-a-hover-state">Adding a Hover State to a SVG</a></li>
+            <li><a href="https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/onclick">SVG onclick</a></li>
+            <li><a href="https://www.w3schools.com/jsref/met_document_getelementsbyclassname.asp">Get Elements By Class Name with JS</a></li>
+            <li><a href="https://stackoverflow.com/questions/35948669/how-to-check-if-a-value-exists-in-an-object-using-javascript">How to Check If a Value Exists in an Object Using JavaScript</a></li>
+            <li><a href="https://www.w3schools.com/jsref/jsref_if.asp">JavaScript if...else</a></li>
         
             
         </ul>

@@ -6,14 +6,37 @@ body {
 .container {
 	display: flex;
 	flex-direction: row;
+	flex-wrap: wrap;
 }
 
 
 .flex-left {
 	width: 60%;
+	flex-wrap: flex;
+	flex-direction: column;
 }
 
 
-.flex-rightt {
+.flex-right {
+	flex-direction: column;
 	width: 40%;
+	flex-wrap: wrap;
+}
+
+.axis{
+	stroke: rgb(255,0,0);
+	stroke-width: 2;
+}
+
+.point{
+	fill: indigo;
+}
+
+.point:hover {
+	fill: springgreen;
+}
+
+.border{
+	stroke-width: 3px;
+	stroke: orange;
 }
