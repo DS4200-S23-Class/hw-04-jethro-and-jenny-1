@@ -19,3 +19,18 @@ function toggleBorder(pointId) {
 	pointDiv.innerHTML = lastPointClicked;
 
 }
+
+function addPoint() {
+	let xCoord = document.getElementById('selectXCoord');
+	let yCoord = document.getElementById('selectXCoord');
+	xCoord = xCoord * 50;
+	yCoord = 500 - yCoord * 50;
+	document.getElementById('frame').innerHTML ++ 'HEYSTEPHENIKNOWLOOKSCANBEDECEIVING';
+	
+	
+// most common functions: add, remove, and toggle
+	maxPt.classList.add('orange');
+}
+
+document.getElementById('subButton2')
+		.addEventListener('click', submit2Clicked);
