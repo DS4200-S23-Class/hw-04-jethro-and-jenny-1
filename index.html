@@ -25,42 +25,28 @@
             <!-- Creating the canvas to house the scatter plot -->
             <svg id="frame" height="500" width="500">  
 
-            <!-- Creating the axes -->
-            <svg>
-                <line class="axis" x1="0" y1="500" x2="500" y2="500">
-            </svg>
+                <!-- Creating the axes -->
+                <line class="axis" x1="0" y1="500" x2="500" y2="500"></line>
+                <line class="axis" x1="0" y1="500" x2="0" y2="0"></line>
 
-            <svg>
-                <line class="axis" x1="0" y1="500" x2="0" y2="0">
-            </svg>
-
-            <!-- Creating the point at (1, 2) -->
-            <svg>
+                <!-- Creating the point at (1, 2) -->
                 <text x="50" y="375">(1,2)</text>  
-                <circle id="(1,2)" class="point" cx="50" cy="400" r="10" onclick="toggleBorder('(1,2)')"/>
-            </svg>
+                <circle id="(1,2)" class="point" cx="50" cy="400" r="10" onclick="toggleBorder('(1,2)')"/></circle>
             
 
-            <!-- Creating the point at (2, 4) -->
-            <svg>
+                <!-- Creating the point at (2, 4) -->
                 <text x="100" y="275">(2, 4)</text>
-                <circle id="(2, 4)" class="point" cx="100" cy="300" r="10" onclick="toggleBorder('(2, 4)')"/>
-            </svg>
+                <circle id="(2, 4)" class="point" cx="100" cy="300" r="10" onclick="toggleBorder('(2, 4)')"/></circle>
 
 
-            <!-- Creating the point at (6, 2) -->
-            <svg>
+                <!-- Creating the point at (6, 2) -->
                 <text x="300" y="375">(6, 2)</text>
-                <circle id="(6, 2)" class="point" cx="300" cy="400" r="10" onclick="toggleBorder('(6, 2)')"/>
-            </svg>
+                <circle id="(6, 2)" class="point" cx="300" cy="400" r="10" onclick="toggleBorder('(6, 2)')"/></circle>
 
 
-            <!-- Creating the point at (9, 9) -->
-            <svg>
+                <!-- Creating the point at (9, 9) -->
                 <text x="450" y="25">(9, 9)</text>
-                <circle id="(9, 9)" class="point" cx="450" cy="50" r="10" onclick="toggleBorder('(9, 9)')"/>
-            </svg>
-
+                <circle id="(9, 9)" class="point" cx="450" cy="50" r="10" onclick="toggleBorder('(9, 9)')"/></circle>
 
         </svg>
         </div>
@@ -69,10 +55,13 @@
 
         <!-- Creating the right side of the flex box -->
         <div class="flex-right">
+
+            <div id="last-point-clicked" class="gen"></div>
             
             <form>
 
             <!-- Allows a user to choose the x-coordinate of a point they want to add -->
+            <br>
             <p1>Select the x-coordinate for the point you want to add.</p1>
             <select id="selectXCoord">
               <option>1</option>
@@ -105,6 +94,7 @@
             <br>
             <br>
             <button type='button' id='addPoint'>Add point</button>
+        </form>
 
         </div>
         
@@ -133,6 +123,8 @@
             <li><a href="https://www.w3schools.com/jsref/jsref_if.asp">JavaScript if...else</a></li>
             <li><a href="https://www.w3schools.com/js/tryit.asp?filename=try_dom_select_disabled">Disable and Enable a Dropdown List</a></li>
             <li><a href="https://www.w3schools.com/js/tryit.asp?filename=try_dom_select_option">Display the Selected Option in a Dropdown List</a></li>
+            <li><a href="https://stackoverflow.com/questions/37079303/how-to-add-svg-using-javascript">How to Add SVG Using Javascript</a></li>
+            <li><a href="https://stackoverflow.com/questions/59936358/trying-to-add-svg-data-with-innerhtml">Trying to Add SVG Data With .innerHTML</a></li>
         
             
         </ul>

@@ -16,21 +16,46 @@ function toggleBorder(pointId) {
 
 	// show the coordinates of the last point clicked in the right column
 	let lastPointClicked = "Last Point Clicked: \n" + pointId;
-	pointDiv.innerHTML = lastPointClicked;
 
+	let lastPointClickedDiv = document.getElementById("last-point-clicked");
+	lastPointClickedDiv.innerHTML = lastPointClicked ;
 }
+
+// Event handler for adding a point
 
 function addPoint() {
-	let xCoord = document.getElementById('selectXCoord');
-	let yCoord = document.getElementById('selectXCoord');
-	xCoord = xCoord * 50;
-	yCoord = 500 - yCoord * 50;
-	document.getElementById('frame').innerHTML ++ 'HEYSTEPHENIKNOWLOOKSCANBEDECEIVING';
-	
-	
-// most common functions: add, remove, and toggle
-	maxPt.classList.add('orange');
+
+	const radius = 10;
+
+	let selectXCoord = document.getElementById('selectXCoord');
+	let selectYCoord = document.getElementById('selectYCoord');
+
+	let xCoord = Number(selectXCoord.options[selectXCoord.selectedIndex].text);
+	let yCoord = Number(selectYCoord.options[selectYCoord.selectedIndex].text);
+	let newPointId = '(' + xCoord + ', ' + yCoord + ')';
+
+	scaledXCoord = xCoord * 50;
+	scaledYCoord = 500 - yCoord * 50;
+
+	let graph = document.getElementById('frame')
+
+	var circle = document.createElementNS("http://www.w3.org/2000/svg", "circle");
+	var pointLabel = document.createElementNS("http://www.w3.org/2000/svg", "text");
+
+	circle.setAttribute("id", newPointId);
+	circle.setAttribute("class", "point"); 
+	circle.setAttribute("cx", scaledXCoord);
+	circle.setAttribute("cy", scaledYCoord); 
+	circle.setAttribute("r", radius); 
+	circle.setAttribute("onclick", "toggleBorder('" + newPointId + "')");
+
+	pointLabel.setAttribute("x", scaledXCoord);
+	pointLabel.setAttribute("y", scaledYCoord - 25);
+	pointLabel.innerHTML = '(' + xCoord + ', ' + yCoord + ')';
+
+	graph.appendChild(circle);
+	graph.appendChild(pointLabel);
 }
 
-document.getElementById('subButton2')
-		.addEventListener('click', submit2Clicked);
+document.getElementById('addPoint')
+			.addEventListener('click', addPoint);
