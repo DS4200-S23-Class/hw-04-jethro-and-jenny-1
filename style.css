@@ -3,6 +3,10 @@ body {
 	font-family: Arial;	
 }
 
+.centered {
+	text-align: center;
+}
+
 .container {
 	display: flex;
 	flex-direction: row;
@@ -44,4 +48,8 @@ body {
 .border{
 	stroke-width: 3px;
 	stroke: orange;
+}
+
+#frame {
+	transform: scale(0.6);
 }

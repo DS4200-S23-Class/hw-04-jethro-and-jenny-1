@@ -23,7 +23,7 @@
 
             <!-- multiplied coords by 50 so canvas should be 450 x 450, but cuts off point so elongated the canvas dimensions/axis lines -->
             <!-- Creating the canvas to house the scatter plot -->
-            <svg id="frame" height="500" width="500">  
+            <svg id="frame" viewbox="0 0 500 500">  
 
                 <!-- Creating the axes -->
                 <line class="axis" x1="0" y1="500" x2="500" y2="500"></line>
@@ -44,7 +44,7 @@
                 <!-- Creating the point at (9, 9) -->
                 <circle id="(9, 9)" class="point" cx="450" cy="50" r="10" onclick="toggleBorder('(9, 9)')"/></circle>
 
-        </svg>
+            </svg>
         </div>
         
 
@@ -121,6 +121,9 @@
             <li><a href="https://www.w3schools.com/js/tryit.asp?filename=try_dom_select_option">Display the Selected Option in a Dropdown List</a></li>
             <li><a href="https://stackoverflow.com/questions/37079303/how-to-add-svg-using-javascript">How to Add SVG Using Javascript</a></li>
             <li><a href="https://stackoverflow.com/questions/59936358/trying-to-add-svg-data-with-innerhtml">Trying to Add SVG Data With .innerHTML</a></li>
+            <li><a href="https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/viewBox">SVG viewBox</a></li>
+            <li><a href="https://css-tricks.com/scale-svg/">Scaling SVG Guide</a></li>
+            <li><a href="https://stackoverflow.com/questions/24463096/change-svg-viewbox-size-with-css">Adjusting SVG viewBox Size</a></li>
         
             
         </ul>
