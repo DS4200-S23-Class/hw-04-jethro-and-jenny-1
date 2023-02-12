@@ -36,6 +36,11 @@ body {
 	fill: springgreen;
 }
 
+.axis {
+	stroke-width: 10;
+	stroke: black;
+}
+
 .border{
 	stroke-width: 3px;
 	stroke: orange;
