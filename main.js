@@ -1,7 +1,5 @@
 // Event handler for clicking a point
 
-let clicks = 0;
-
 function toggleBorder(pointId) {
 
 	// retrieve a point on the graph
@@ -21,27 +19,36 @@ function toggleBorder(pointId) {
 	lastPointClickedDiv.innerHTML = lastPointClicked ;
 }
 
+
 // Event handler for adding a point
 
 function addPoint() {
 
+	// set radius as a constant
 	const radius = 10;
 
+	// obtain the coordinate values the user inputted
 	let selectXCoord = document.getElementById('selectXCoord');
 	let selectYCoord = document.getElementById('selectYCoord');
 
+	// convert user input into numbers
 	let xCoord = Number(selectXCoord.options[selectXCoord.selectedIndex].text);
 	let yCoord = Number(selectYCoord.options[selectYCoord.selectedIndex].text);
+
+	// establish the ID attribute of the new point
 	let newPointId = '(' + xCoord + ', ' + yCoord + ')';
 
+	// scale the point so that it is pointed on the plot appropriately
 	scaledXCoord = xCoord * 50;
 	scaledYCoord = 500 - yCoord * 50;
 
+	// obtain the area the graph is located
 	let graph = document.getElementById('frame')
 
+	// create a new element (point)
 	var circle = document.createElementNS("http://www.w3.org/2000/svg", "circle");
-	var pointLabel = document.createElementNS("http://www.w3.org/2000/svg", "text");
 
+	// set the attributes of the new element
 	circle.setAttribute("id", newPointId);
 	circle.setAttribute("class", "point"); 
 	circle.setAttribute("cx", scaledXCoord);
@@ -49,12 +56,8 @@ function addPoint() {
 	circle.setAttribute("r", radius); 
 	circle.setAttribute("onclick", "toggleBorder('" + newPointId + "')");
 
-	pointLabel.setAttribute("x", scaledXCoord);
-	pointLabel.setAttribute("y", scaledYCoord - 25);
-	pointLabel.innerHTML = '(' + xCoord + ', ' + yCoord + ')';
-
+	// display the new point on the plot
 	graph.appendChild(circle);
-	graph.appendChild(pointLabel);
 }
 
 document.getElementById('addPoint')
