@@ -42,7 +42,7 @@ function addPoint() {
 	scaledXCoord = xCoord * 50;
 	scaledYCoord = 500 - yCoord * 50;
 
-	// obtain the area the graph is located
+	// obtain the area the graph is located in
 	let graph = document.getElementById('frame')
 
 	// create a new element (point)

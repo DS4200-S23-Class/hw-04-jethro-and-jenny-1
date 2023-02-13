@@ -3,12 +3,12 @@ body {
 	font-family: Arial;	
 }
 
-/* Centers all titles or elements with the class "cenetered" */
+/* Centers all titles or elements with the class "centered" */
 .centered {
 	text-align: center;
 }
 
-/* Creates a flex container to make 2 columns*/
+/* Creates a flex container to make 2 columns */
 .container {
 	display: flex;
 	flex-direction: row;
@@ -45,7 +45,7 @@ body {
 	fill: springgreen;
 }
 
-/* Sets border around points if they have been clicked*/
+/* Sets border around points if they have been clicked */
 .border{
 	stroke-width: 5px;
 	stroke: orange;
