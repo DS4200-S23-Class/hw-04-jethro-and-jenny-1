@@ -3,7 +3,7 @@
 function toggleBorder(pointId) {
 
 	// retrieve a point on the graph
-	let point= document.getElementById(pointId);
+	let point = document.getElementById(pointId);
 	
 	// add or remove a border to a point if clicked on
 	if (Object.values(point.classList).includes('border')) {
@@ -16,7 +16,7 @@ function toggleBorder(pointId) {
 	let lastPointClicked = "Last Point Clicked: \n" + pointId;
 
 	let lastPointClickedDiv = document.getElementById("last-point-clicked");
-	lastPointClickedDiv.innerHTML = lastPointClicked ;
+	lastPointClickedDiv.innerHTML = lastPointClicked;
 }
 
 
@@ -25,7 +25,7 @@ function toggleBorder(pointId) {
 function addPoint() {
 
 	// set radius as a constant
-	const radius = 10;
+	const RADIUS = 10;
 
 	// obtain the coordinate values the user inputted
 	let selectXCoord = document.getElementById('selectXCoord');
@@ -38,22 +38,22 @@ function addPoint() {
 	// establish the ID attribute of the new point
 	let newPointId = '(' + xCoord + ', ' + yCoord + ')';
 
-	// scale the point so that it is pointed on the plot appropriately
-	scaledXCoord = xCoord * 50;
-	scaledYCoord = 500 - yCoord * 50;
+	// scale the point so that it is placed on the plot appropriately
+	let scaledXCoord = xCoord * 50;
+	let scaledYCoord = 500 - yCoord * 50;
 
-	// obtain the area the graph is located in
-	let graph = document.getElementById('frame')
+	// obtain the graph to add the points in
+	let graph = document.getElementById('frame');
 
 	// create a new element (point)
-	var circle = document.createElementNS("http://www.w3.org/2000/svg", "circle");
+	let circle = document.createElementNS("http://www.w3.org/2000/svg", "circle");
 
-	// set the attributes of the new element
+	// set the attributes of the new element (point)
 	circle.setAttribute("id", newPointId);
 	circle.setAttribute("class", "point"); 
 	circle.setAttribute("cx", scaledXCoord);
 	circle.setAttribute("cy", scaledYCoord); 
-	circle.setAttribute("r", radius); 
+	circle.setAttribute("r", RADIUS); 
 	circle.setAttribute("onclick", "toggleBorder('" + newPointId + "')");
 
 	// display the new point on the plot
@@ -62,5 +62,5 @@ function addPoint() {
 
 // get the button 
 document.getElementById('addPoint')
-			// call the function when clicked
+			// call the function (adding a point) when clicked
 			.addEventListener('click', addPoint);

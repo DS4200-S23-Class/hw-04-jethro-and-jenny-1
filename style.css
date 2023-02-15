@@ -3,7 +3,7 @@ body {
 	font-family: Arial;	
 }
 
-/* Centers all titles or elements with the class "centered" */
+/* Centers all elements with the class "centered" */
 .centered {
 	text-align: center;
 }
@@ -40,7 +40,7 @@ body {
 	fill: indigo;
 }
 
-/* Changes the color of the points after user hovers over them */
+/* Changes the color of the points after the user hovers over them */
 .point:hover {
 	fill: springgreen;
 }
