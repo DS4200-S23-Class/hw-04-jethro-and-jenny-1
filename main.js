@@ -60,5 +60,7 @@ function addPoint() {
 	graph.appendChild(circle);
 }
 
+// get the button 
 document.getElementById('addPoint')
+			// call the function when clicked
 			.addEventListener('click', addPoint);
